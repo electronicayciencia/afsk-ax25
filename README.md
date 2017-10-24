@@ -16,6 +16,10 @@ Files
 
 - test_data: Directory with some raw binary AX25 packets to test decode_ax25.
 
+- test_snd: Directory with some synthetic and real recorded frames.
+
+- misc: Auxiliary files.
+
 
 Build
 -----
