@@ -1,4 +1,6 @@
 %% Software simulation of TCM3105 decoding proccess
+% Electronica y Ciencia
+% http://electronicayciencia.blogspot.com/
 
 clear
 
@@ -124,7 +126,7 @@ for i = 1:length(E)
         n = round((i - last_tran)/smps);
         NRZI_DATA = [NRZI_DATA, ones(1,n-1), 0];
         
-        % Desviación al entero más cercano
+        % DesviaciÃ³n al entero mÃ¡s cercano
         n = (i - last_tran)/smps;
         des = abs(n - round(n))/n;
         DUR(i) = n;
@@ -157,46 +159,46 @@ toStringJSON(NRZI_DATA)
 
 %%
 plot (x,A)
-xlabel('nº de muestra (44100Hz)');
+xlabel('nÂº de muestra (44100Hz)');
 ylabel('Valor');
-title('Detalle señal FSK');
+title('Detalle seÃ±al FSK');
 grid
 
 %%
 plot (x,B,x,A)
-xlabel('nº de muestra (44100Hz)');
+xlabel('nÂº de muestra (44100Hz)');
 ylabel('Valor');
-title('Señal FSK cuadrada');
+title('SeÃ±al FSK cuadrada');
 grid
 
 %%
 plot (x,C,x,A)
-xlabel('nº de muestra (44100Hz)');
+xlabel('nÂº de muestra (44100Hz)');
 ylabel('Valor');
-title('Efecto del flip flop de duración fija');
+title('Efecto del flip flop de duraciÃ³n fija');
 grid
 
 %%
 c = square(2*pi*600*(x-10)/SR)*3+2;
 plot (x,D,x,A,x,4.5*ones(size(x)),x,2*ones(size(x)),x,c)
 
-xlabel('nº de muestra (44100Hz)');
+xlabel('nÂº de muestra (44100Hz)');
 ylabel('Valor');
 title('Efecto del filtro paso bajo');
 grid
 
 %%
 plot (x,E,x,A)
-xlabel('nº de muestra (44100Hz)');
+xlabel('nÂº de muestra (44100Hz)');
 ylabel('Valor');
 title('Efecto del "slicer"');
 grid
 
 %%
 plot (x,DUR)
-xlabel('nº de muestra (44100Hz)');
-ylabel('Duración en símbolos');
-title('Decodificación NZRI');
+xlabel('nÂº de muestra (44100Hz)');
+ylabel('DuraciÃ³n en sÃ­mbolos');
+title('DecodificaciÃ³n NZRI');
 grid
 
 
