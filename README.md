@@ -3,7 +3,7 @@ afsk-ax25
 
 Support files for a post about decoding FSK from scratch.
 
-http://electronicayciencia.blogspot.com/
+http://electronicayciencia.blogspot.com/2017/10/demodular-afsk-desde-cero.html (spanish)
 
 
 
